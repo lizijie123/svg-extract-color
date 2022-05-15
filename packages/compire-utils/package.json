@@ -1,0 +1,7 @@
+{
+  "name": "compire-utils",
+  "version": "0.0.1",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.ts"
+}
