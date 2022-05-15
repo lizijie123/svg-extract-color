@@ -1,0 +1,5 @@
+packages:
+  # root directory
+  - "."
+  # all packages in subdirs of packages/
+  - "packages/**"
