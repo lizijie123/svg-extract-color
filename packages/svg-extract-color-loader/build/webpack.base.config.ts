@@ -1,4 +1,3 @@
-import * as utils from 'compire-utils'
 import type {
   Configuration,
 } from 'webpack'
