@@ -15,4 +15,7 @@ module.exports = {
   plugins: [
     '@typescript-eslint/eslint-plugin',
   ],
+  rules: {
+    '@typescript-eslint/no-var-requires': 'off',
+  },
 }
