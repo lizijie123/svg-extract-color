@@ -31,10 +31,6 @@ const webpackBase: Configuration = {
   },
   resolve: {
     extensions: ['.ts', 'js'],
-    alias: {
-      '@': utils.fixedToRelativePath('/app'),
-      '@utils': utils.fixedToRelativePath('/app/utils'),
-    },
   },
   devtool: process.env.NODE_ENV === 'development' ? 'cheap-module-source-map' : false,
 }
