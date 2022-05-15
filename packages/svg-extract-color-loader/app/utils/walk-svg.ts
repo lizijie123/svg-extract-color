@@ -5,7 +5,7 @@ import * as utils from '../utils/index'
  * 该posthtml插件功能如下
  * 颜色属性值修改为--color
  */
-const walkSvgPosthmlPlugin: () => posthtml.Plugin<Global> = () => {
+const walkSvgPosthmlPlugin: () => posthtml.Plugin<void> = () => {
   return tree => {
     tree.walk(node => {
       if (node?.attrs) {

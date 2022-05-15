@@ -29,7 +29,6 @@ async function runSvgExtractColorLoader (content) {
   return removeSpace(context.result)
 }
 
-
 module.exports = {
   removeSpace,
   runSvgExtractColorLoader,
