@@ -1,0 +1,40 @@
+{
+  "name": "examples-svg-extract-color-loader",
+  "version": "1.0.0",
+  "scripts": {
+    "start:dev": "cross-env NODE_ENV=development nodemon --exec 'ts-node -r tsconfig-paths/register ./server/server --files'",
+    "start:prod": "cross-env NODE_ENV=production nodemon --exec 'ts-node -r tsconfig-paths/register ./server/server --files'",
+    "start:debugger": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register ./server/server --files",
+    "build:dev": "rm -rf ./dist && cross-env NODE_ENV=development webpack --config ./build/webpack.config.ts --progress",
+    "build:prod": "rm -rf ./dist && cross-env NODE_ENV=production webpack --config ./build/webpack.config.ts --progress"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/node": "^17.0.23",
+    "@types/webpack-env": "^1.16.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.28.0",
+    "eslint-import-resolver-webpack": "^0.13.2",
+    "eslint-plugin-import": "^2.23.4",
+    "html-webpack-plugin": "^5.5.0",
+    "nodemon": "^2.0.15",
+    "svg-sprite-loader": "^6.0.11",
+    "ts-node": "^10.0.0",
+    "tsconfig-paths": "^3.14.1",
+    "typescript": "^4.3.2",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.17.3",
+    "svg-extract-color-loader": "workspace:*",
+    "webpack-dev-middleware": "^5.3.1",
+    "webpack-hot-middleware": "^2.25.1"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "build:prod"
+      ],
+      "cwd": "${workspaceRoot}/app",
+      "port": 9001,
+      "console":"integratedTerminal",
+      "sourceMaps": true
+    }
+  ]
+}
