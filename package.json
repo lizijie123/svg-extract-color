@@ -9,7 +9,7 @@
     "@types/node": "^17.0.23",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
-    "compire-utils": "workspace:^0.0.1",
+    "compire-utils": "workspace:*",
     "cross-env": "^7.0.3",
     "eslint": "^7.28.0",
     "eslint-plugin-import": "^2.23.4",

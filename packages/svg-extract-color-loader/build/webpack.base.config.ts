@@ -13,7 +13,7 @@ const webpackBase: Configuration = {
   module: {
     rules: [
       {
-        test: /\.(ts)|(js)?$/,
+        test: /\.(t|j)s?$/,
         use: [
           {
             loader: 'babel-loader',

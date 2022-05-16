@@ -14,7 +14,7 @@
     "@babel/core": "^7.17.10",
     "@babel/preset-typescript": "^7.16.7",
     "babel-loader": "^8.2.5",
-    "compire-utils": "workspace:^0.0.1",
+    "compire-utils": "workspace:*",
     "cross-env": "^7.0.3",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",
