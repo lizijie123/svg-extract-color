@@ -1,7 +1,11 @@
+import qs from 'querystring'
 import {
   colorReg,
   includeColorReg,
 } from '../utils/validator'
+import type {
+  IAnyObj,
+} from '../../../../types/utils'
 
 /**
  * 获取字符串中的所有颜色
@@ -46,4 +50,14 @@ export const hasOnlyColor = (str = ''): boolean => {
  */
 export const removeDoubleQuotes = (str = ''): string => {
   return str.replace(/(^")|("$)/g, '')
+}
+
+/**
+ * 获取配置的参数
+ */
+export function getOptions (query: string | IAnyObj): IAnyObj {
+  if (typeof query === 'string') {
+    return qs.parse(query) as IAnyObj
+  }
+  return query
 }
