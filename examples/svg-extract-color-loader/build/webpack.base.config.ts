@@ -38,10 +38,11 @@ const webpackBase: Configuration = {
           },
           {
             loader: 'svg-extract-color-loader',
-            options: {
-              cssVariableName: '--color1',
-            }
-            // options: 'cssVariableName=--color1'
+            // options: {
+            //   cssVariableName: '--color1',
+            // }
+            // or
+            options: 'cssVariableName=--color1'
           },
         ],
         exclude: [/node_modules/],

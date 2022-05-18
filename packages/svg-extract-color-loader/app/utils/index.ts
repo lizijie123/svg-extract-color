@@ -57,7 +57,7 @@ export const removeDoubleQuotes = (str = ''): string => {
  */
 export function getOptions (query: string | IAnyObj): IAnyObj {
   if (typeof query === 'string') {
-    return qs.parse(query) as IAnyObj
+    return qs.parse(query.replace(/^\?/, '')) as IAnyObj
   }
   return query
 }
