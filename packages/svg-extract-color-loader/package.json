@@ -1,6 +1,6 @@
 {
   "name": "@svg-extract-color/svg-extract-color-loader",
-  "version": "1.0.0-beta",
+  "version": "1.0.1-beta",
   "description": "A Webpack Loader to extract svg color",
   "author": "lizijie123",
   "repository": {
