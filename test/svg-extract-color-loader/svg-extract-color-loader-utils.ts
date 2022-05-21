@@ -1,4 +1,4 @@
-const { default: svgExtractColorLoader } = require('svg-extract-color-loader')
+import svgExtractColorLoader from 'svg-extract-color-loader'
 
 class SvgExtractColorLoaderUtils {
   /**
@@ -23,13 +23,11 @@ class SvgExtractColorLoaderUtils {
   /**
    * 执行svg-extract-color-loader
    */
-  async runSvgExtractColorLoader (svgContent) {
+  async runSvgExtractColorLoader (svgContent: string): Promise<string> {
     const context = this.createContext()
     await svgExtractColorLoader.call(context, svgContent)
     return context.result
   }
 }
 
-module.exports = {
-  default: new SvgExtractColorLoaderUtils()
-}
+export default new SvgExtractColorLoaderUtils()

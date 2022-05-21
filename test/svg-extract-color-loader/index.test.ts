@@ -1,8 +1,8 @@
-const utils = require('./utils')
-const { default: svgExtractColorLoaderUtils } = require('./svg-extract-color-loader-utils')
+import * as utils from './utils'
+import svgExtractColorLoaderUtils from './svg-extract-color-loader-utils'
 
 describe('constants', () => {
-  it("svg-extract-color-loader", async () => {
+  it('svg-extract-color-loader', async () => {
     // 需要编译的svg
     const currentSvg = utils.getSvgFile('test.svg')
     // 编译的目标svg

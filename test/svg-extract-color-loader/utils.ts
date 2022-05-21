@@ -1,21 +1,17 @@
-const fs = require('fs')
+import fs from 'fs'
 
 /**
  * 获取所有svg文件
  */
-function getSvgFile (fileName) {
+export function getSvgFile (fileName: string): string {
   return fs.readFileSync(`${process.cwd()}/test/svg-extract-color-loader/svg/${fileName}`, 'utf-8')
 }
 
 /**
  * 移除中括号以外的空格与xml标签
  */
-function removeSpaceAndXml (content) {
+export function removeSpaceAndXml (content: string): string {
+  if (!content) return ''
   const res = content.match(/<.*>/ig)
   return res.join('').replace(/<\?xml[^>]*>/ig, '')
-}
-
-module.exports = {
-  getSvgFile,
-  removeSpaceAndXml,
 }
