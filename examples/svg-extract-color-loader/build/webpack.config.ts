@@ -4,7 +4,7 @@ import webpackBaseConfig from './webpack.base.config'
 import * as utils from '../lib/utils'
 
 const webpackConfig: Configuration = {
-  entry: utils.fixedToRelativePath('/app/index'),
+  entry: [utils.fixedToRelativePath('/app/index')],
   output: {
     path: utils.fixedToRelativePath('/dist'),
     filename: '[name].[fullhash:8].[contenthash:8].js',

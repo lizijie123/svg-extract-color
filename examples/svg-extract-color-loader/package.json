@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.18.0",
     "@babel/preset-typescript": "^7.16.7",
     "@types/node": "^17.0.23",
     "@types/webpack-env": "^1.16.0",
@@ -32,7 +33,9 @@
   },
   "dependencies": {
     "body-parser": "^1.20.0",
+    "core-js": "^3.22.5",
     "express": "^4.17.3",
+    "regenerator-runtime": "^0.13.9",
     "svg-extract-color-loader": "workspace:*",
     "webpack-dev-middleware": "^5.3.1",
     "webpack-hot-middleware": "^2.25.1"

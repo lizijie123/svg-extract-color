@@ -20,6 +20,13 @@ const webpackBase: Configuration = {
             loader: 'babel-loader',
             options: {
               presets: [
+                [
+                  '@babel/preset-env',
+                  {
+                    useBuiltIns: 'usage',
+                    corejs: 3,
+                  },
+                ],
                 '@babel/preset-typescript',
               ],
             },
@@ -38,11 +45,11 @@ const webpackBase: Configuration = {
           },
           {
             loader: 'svg-extract-color-loader',
-            // options: {
-            //   cssVariableName: '--color1',
-            // }
+            options: {
+              cssVariableName: '--color-test',
+            },
             // or
-            options: 'cssVariableName=--color1'
+            // options: 'cssVariableName=--color-test'
           },
         ],
         exclude: [/node_modules/],
@@ -56,7 +63,7 @@ const webpackBase: Configuration = {
     }),
   ],
   resolve: {
-    extensions: ['.ts'],
+    extensions: ['.ts', '.js'],
   },
   devtool: process.env.NODE_ENV === 'development' ? 'cheap-module-source-map' : false,
 }

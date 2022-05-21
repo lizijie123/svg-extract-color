@@ -24,6 +24,10 @@ app.use('*', (req, res, next) => {
 
 if (process.env.__ENV__ === 'development') {
   // 开发环境热更新
+  webpackConfig.entry = ['webpack-hot-middleware/client', webpackConfig.entry[0]]
+  webpackConfig.plugins.push(
+    new webpack.HotModuleReplacementPlugin(),
+  )
   const compiler = webpack(webpackConfig)
   const middleware = webpackDevMiddleware(compiler, {
     publicPath: webpackConfig.output.publicPath,
