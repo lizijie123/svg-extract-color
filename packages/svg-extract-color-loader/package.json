@@ -1,6 +1,6 @@
 {
-  "name": "svg-extract-color-loader",
-  "version": "0.1.6",
+  "name": "@svg-extract-color/svg-extract-color-loader",
+  "version": "1.0.0-beta",
   "description": "A Webpack Loader to extract svg color",
   "scripts": {
     "start:dev": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register ./app/index --files",
@@ -9,6 +9,9 @@
     "build:prod": "rm -rf ./dist && cross-env NODE_ENV=production webpack --config ./build/webpack.config.ts --progress"
   },
   "license": "MIT",
+  "files": [
+    "dist/*.js"
+  ],
   "main": "dist/index.js",
   "devDependencies": {
     "@babel/core": "^7.17.10",
