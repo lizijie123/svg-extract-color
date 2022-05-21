@@ -1,35 +1,21 @@
-const { default: svgExtractColorLoader } = require('../../packages/svg-extract-color-loader/dist/index')
+const fs = require('fs')
 
 /**
- * loader上下文对象
+ * 获取所有svg文件
  */
-const context = {
-  result: '',
-  async: () => callback
-}
-
-function callback (err, content) {
-  if (err) throw err
-  context.result = content
+function getSvgFile (fileName) {
+  return fs.readFileSync(`${process.cwd()}/test/svg-extract-color-loader/svg/${fileName}`, 'utf-8')
 }
 
 /**
- * 移除中括号以外的空格
+ * 移除中括号以外的空格与xml标签
  */
-function removeSpace (content) {
+function removeSpaceAndXml (content) {
   const res = content.match(/<.*>/ig)
-  return res.join('')
-}
-
-/**
- * 执行svg-extract-color-loader
- */
-async function runSvgExtractColorLoader (content) {
-  await svgExtractColorLoader.call(context, content)
-  return removeSpace(context.result)
+  return res.join('').replace(/<\?xml[^>]*>/ig, '')
 }
 
 module.exports = {
-  removeSpace,
-  runSvgExtractColorLoader,
+  getSvgFile,
+  removeSpaceAndXml,
 }

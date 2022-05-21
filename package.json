@@ -2,7 +2,7 @@
   "name": "svg-extract-color",
   "license": "MIT",
   "scripts": {
-    "test:only": "jest"
+    "test:svg-extract-color-loader": "jest"
   },
   "devDependencies": {
     "@types/jest": "^27.5.1",
