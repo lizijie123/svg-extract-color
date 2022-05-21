@@ -1,16 +1,16 @@
 # svg-extract-color
 
-## 为什么需要svg-extract-color
+## 为什么需要 svg-extract-color
 
-当我们使用了 SVG Sprite 时，我们希望能够通过use标签修改SVG的颜色。有些SVG可以通过为use标签传入color属性修改SVG颜色；有些SVG需要先将内部的所有fill与stroke属性删除，才能通过为use标签传入color属性修改SVG颜色；有些SVG即使将内部的所有fill与stroke属性删除，也无法通过为use标签传入color属性修改SVG颜色；
+当我们使用了 SVG Sprite 时，我们希望能够通过use标签修改 SVG 的颜色。有些 SVG 可以通过为use标签传入color属性修改 SVG 颜色；有些 SVG 需要先将内部的所有fill与stroke属性删除，才能通过为use标签传入color属性修改 SVG 颜色；有些 SVG 即使将内部的所有fill与stroke属性删除，也无法通过为use标签传入color属性修改 SVG 颜色；
 
-[无法通过为use标签传入color属性修改SVG颜色示例](./examples/svg-sprite/index.html)
+[上述情况示例](./examples/svg-sprite/index.html)
 
 ## 他是如何工作的
 
-SVG中的所有颜色会由原颜色替换为var(--color, 原颜色)，此时我们在需要修改颜色的use标签中传入css变量即可修改颜色
+本loader需要与svg-sprite-loader搭配使用
 
-tips: 本loader需要与svg-sprite-loader搭配使用
+编译阶段会将 SVG 中的所有颜色属性值会由原颜色替换为 CSS 变量调用形式 var(--color, 原颜色属性值) 。在运行时，我们在需要修改颜色的use标签中传入 CSS 变量即可修改颜色。
 
 ```html
 <!-- 单独使用 svg-sprite-loader -->
@@ -34,7 +34,7 @@ yarn add svg-extract-color-loader -D
 pnpm install svg-extract-color-loader -D
 ```
 
-## 配置
+## 如何使用
 
 本loader需要与[svg-sprite-loader](https://github.com/JetBrains/svg-sprite-loader)搭配使用
 
@@ -50,7 +50,7 @@ pnpm install svg-extract-color-loader -D
 
 ### cssVariableName
 
-cssVariableName用于设置SVG中使用的css变量名，这会影响use标签中传入的css变量名，默认值为: `--color`
+cssVariableName 用于设置 SVG 中使用的 CSS 变量名，这会影响use标签中传入的 CSS 变量名，默认值为: `--color`
 
 ```js
 options: {
@@ -60,7 +60,7 @@ options: {
 
 ```html
 <svg>
-  <use xlink:href="#icon-plus" style="--svg-color: red">
+  <use xlink:href="#icon-complex" style="--svg-color: red">
 </svg>
 ```
 
