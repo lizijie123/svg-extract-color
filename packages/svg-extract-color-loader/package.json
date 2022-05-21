@@ -2,6 +2,14 @@
   "name": "@svg-extract-color/svg-extract-color-loader",
   "version": "1.0.0-beta",
   "description": "A Webpack Loader to extract svg color",
+  "author": "lizijie123",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lizijie123/svg-extract-color.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start:dev": "cross-env NODE_ENV=development ts-node -r tsconfig-paths/register ./app/index --files",
     "start:prod": "cross-env NODE_ENV=production ts-node -r tsconfig-paths/register ./app/index --files",
