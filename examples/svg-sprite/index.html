@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+    .rect16 {
+      width: 16px;
+      height: 16px;
+    }
+  </style>
 </head>
 <body>
   <svg>
-    <symbol id="icon-plus">
-        <title>Group 15</title>
+    <symbol id="icon-simple">
+      <title>可以通过为use标签传入color属性修改颜色的 SVG 示例(需要手动将fill与stroke属性改为currentColor)</title>
+      <line x1="3.75735931" y1="3.75735931" x2="12.2426407" y2="12.2426407" id="Line-3" stroke="currentColor" stroke-width="2" stroke-linecap="square" transform="translate(8.000000, 8.000000) scale(-1, 1) rotate(-45.000000) translate(-8.000000, -8.000000) "></line>
+    </symbol>
+
+    <symbol id="icon-complex">
+        <title>不可以通过为use标签传入color属性修改颜色的 SVG 示例</title>
         <g id="product-detail" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g id="product_detail-" transform="translate(-339.000000, -1297.000000)">
                 <g id="Group-15" transform="translate(339.000000, 1297.000000)">
@@ -17,15 +28,31 @@
         </g>
     </symbol>
   </svg>
+
+  <h1>
+    可以通过为use标签传入color属性修改颜色的 SVG 示例(需要手动将fill与stroke属性改为currentColor)
+  </h1>
+  <svg class="rect16">
+    <use xlink:href="#icon-simple">
+  </svg>
+  <svg class="rect16">
+    <use xlink:href="#icon-simple" style="color: red;">
+  </svg>
+  <svg class="rect16">
+    <use xlink:href="#icon-simple" style="color: blue;">
+  </svg>
   
-  <svg>
-    <use xlink:href="#icon-href">
+  <h1>
+    不可以通过为use标签传入color属性修改颜色的 SVG 示例
+  </h1>
+  <svg class="rect16">
+    <use xlink:href="#icon-complex">
   </svg>
-  <svg>
-    <use xlink:href="#icon-href" style="color: red;">
+  <svg class="rect16">
+    <use xlink:href="#icon-complex" style="color: red;">
   </svg>
-  <svg>
-    <use xlink:href="#icon-href" style="color: blue;">
+  <svg class="rect16">
+    <use xlink:href="#icon-complex" style="color: blue;">
   </svg>
 </body>
 </html>
