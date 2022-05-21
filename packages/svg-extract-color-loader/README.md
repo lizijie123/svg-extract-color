@@ -37,6 +37,8 @@ pnpm install @svg-extract-color/svg-extract-color-loader -D
 
 本loader需要与[svg-sprite-loader](https://github.com/JetBrains/svg-sprite-loader)搭配使用
 
+且目前只支持修改单色 SVG
+
 ```js
 {
   test: /\.svg$/,
