@@ -44,7 +44,7 @@ const webpackBase: Configuration = {
             },
           },
           {
-            loader: 'svg-extract-color-loader',
+            loader: '@svg-extract-color/svg-extract-color-loader',
             options: {
               cssVariableName: '--color-test',
             },

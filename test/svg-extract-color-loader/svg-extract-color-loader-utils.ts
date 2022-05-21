@@ -1,4 +1,4 @@
-import svgExtractColorLoader from 'svg-extract-color-loader'
+import svgExtractColorLoader from '@svg-extract-color/svg-extract-color-loader'
 
 class SvgExtractColorLoaderUtils {
   /**

@@ -27,11 +27,11 @@
 
 ```shell
 # todo
-npm install svg-extract-color-loader -D
+npm install @svg-extract-color/svg-extract-color-loader -D
 # or
-yarn add svg-extract-color-loader -D
+yarn add @svg-extract-color/svg-extract-color-loader -D
 # or
-pnpm install svg-extract-color-loader -D
+pnpm install @svg-extract-color/svg-extract-color-loader -D
 ```
 
 ## 如何使用
@@ -43,7 +43,7 @@ pnpm install svg-extract-color-loader -D
   test: /\.svg$/,
   use: [
     'svg-sprite-loader',
-    'svg-extract-color-loader',
+    '@svg-extract-color/svg-extract-color-loader',
   ],
 }
 ```
@@ -66,4 +66,4 @@ options: {
 
 ## 示例
 
-请参阅[示例](./examples/)文件夹
+请参阅[svg-extract-color-loader示例](./examples/svg-extract-color-loader/README.md)文件夹
