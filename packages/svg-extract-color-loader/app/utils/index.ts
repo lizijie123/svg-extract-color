@@ -55,9 +55,9 @@ export const removeDoubleQuotes = (str = ''): string => {
 /**
  * 获取配置的参数
  */
-export function getOptions (query: string | IAnyObj): IAnyObj {
+export function getOptions (query?: string | IAnyObj): IAnyObj {
   if (typeof query === 'string') {
-    return qs.parse(query.replace(/^\?/, '')) as IAnyObj
+    return (qs.parse(query.replace(/^\?/, '')) || {}) as IAnyObj
   }
-  return query
+  return query || {}
 }
