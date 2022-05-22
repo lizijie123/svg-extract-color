@@ -6,7 +6,7 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "useDefineForClassFields": true,
-    "declaration": false,
+    "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -17,6 +17,8 @@
     "baseUrl": ".",
     "incremental": true,
     "allowJs": true,
+    "outDir": "./dist",
+    "rootDir": "./",
     "lib": [
       "esnext",
       "dom",

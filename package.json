@@ -3,7 +3,8 @@
   "license": "MIT",
   "scripts": {
     "test:svg-extract-color-loader": "jest",
-    "publish:svg-extract-color-loader": "pnpm run build:prod -r --filter svg-extract-color-loader && pnpm publish -r --filter svg-extract-color-loader"
+    "build:svg-extract-color-loader": "pnpm run build -r --filter svg-extract-color-loader",
+    "publish:svg-extract-color-loader": "pnpm run build:svg-extract-color-loader && pnpm publish -r --filter svg-extract-color-loader"
   },
   "devDependencies": {
     "@types/jest": "^27.5.1",

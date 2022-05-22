@@ -5,7 +5,7 @@ import {
 } from '../utils/validator'
 import type {
   IAnyObj,
-} from '../../../../types/utils'
+} from '../../types/index'
 
 /**
  * 获取字符串中的所有颜色
