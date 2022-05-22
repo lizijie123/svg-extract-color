@@ -1,5 +1,7 @@
 # svg-extract-color
 
+[![npm](https://img.shields.io/npm/v/@svg-extract-color/svg-extract-color-loader)](https://www.npmjs.com/package/@svg-extract-color/svg-extract-color-loader)
+
 ## 为什么需要 svg-extract-color
 
 当我们使用了 SVG Sprite 时，我们希望能够通过use标签修改 SVG 的颜色。有些 SVG 可以通过为use标签传入color属性修改 SVG 颜色；有些 SVG 需要先将内部的所有fill与stroke属性删除，才能通过为use标签传入color属性修改 SVG 颜色；有些 SVG 即使将内部的所有fill与stroke属性删除，也无法通过为use标签传入color属性修改 SVG 颜色；
