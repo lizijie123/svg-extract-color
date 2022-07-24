@@ -13,24 +13,18 @@ const webpackBase: Configuration = {
   module: {
     rules: [
       {
-        test: /\.(t|j)s?$/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                [
-                  '@babel/preset-env',
-                  {
-                    useBuiltIns: 'usage',
-                    corejs: 3,
-                  },
-                ],
-                '@babel/preset-typescript',
-              ],
+        test: /\.(t|j)s$/,
+        use: {
+          loader: 'swc-loader',
+          options: {
+            jsc: {
+              parser: {
+                syntax: 'typescript',
+              },
+              target: 'es5',
             },
           },
-        ],
+        },
         exclude: /node_modules/,
       },
     ],
