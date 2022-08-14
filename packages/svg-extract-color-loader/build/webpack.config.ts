@@ -24,7 +24,6 @@ const webpackConfig: Configuration = {
     },
     name: 'cache',
   } : false,
-  externals: utils.getExternalModules(),
 }
 
 export default webpackMerge(webpackConfig, webpackBaseConfig)
