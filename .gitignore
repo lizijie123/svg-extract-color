@@ -6,6 +6,7 @@ node_modules
 
 # output
 dist
+es
 
 # local env files
 .env.local
