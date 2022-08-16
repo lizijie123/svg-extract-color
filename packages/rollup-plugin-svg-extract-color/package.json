@@ -1,0 +1,30 @@
+{
+  "name": "@svg-extract-color/rollup-plugin-svg-extract-color",
+  "version": "0.1.0",
+  "description": "A Rollup Plugin to extract svg color",
+  "author": "lizijie123",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lizijie123/svg-extract-color.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "files": [
+    "dist",
+    "es"
+  ],
+  "main": "es/index.js",
+  "types": "es/index.d.ts",
+  "scripts": {
+    "rm": "rm -rf ./dist && rm -rf ./es",
+    "build:dev": "pnpm run rm && cross-env NODE_ENV=development rollup -c ./build/rollup.config.ts",
+    "build:prod": "pnpm run rm && cross-env NODE_ENV=production rollup -c ./build/rollup.config.ts"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "fs-extra": "^10.1.0",
+    "rollup": "^2.78.0"
+  }
+}
