@@ -4,7 +4,8 @@
   "scripts": {
     "test:svg-extract-color-loader": "jest",
     "publish:svg-extract-color-core": "pnpm run build:prod -r --filter svg-extract-color-core && pnpm publish -r --filter svg-extract-color-core",
-    "publish:svg-extract-color-loader": "pnpm run build -r --filter svg-extract-color-loader && pnpm publish -r --filter svg-extract-color-loader"
+    "publish:svg-extract-color-loader": "pnpm run build -r --filter svg-extract-color-loader && pnpm publish -r --filter svg-extract-color-loader",
+    "publish:rollup-plugin-svg-extract-color": "pnpm run build:prod -r --filter rollup-plugin-svg-extract-color && pnpm publish -r --filter rollup-plugin-svg-extract-color"
   },
   "devDependencies": {
     "@svg-extract-color/svg-extract-color-core": "workspace:*",
