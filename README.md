@@ -37,6 +37,8 @@ pnpm install @svg-extract-color/svg-extract-color-loader -D
 
 ## 如何使用
 
+### 与 webpack 配合使用
+
 本loader需要与[svg-sprite-loader](https://github.com/JetBrains/svg-sprite-loader)搭配使用
 
 且目前只支持修改单色 SVG
@@ -51,7 +53,7 @@ pnpm install @svg-extract-color/svg-extract-color-loader -D
 }
 ```
 
-### cssVariableName
+#### cssVariableName
 
 cssVariableName 用于设置 SVG 中使用的 CSS 变量名，这会影响use标签中传入的 CSS 变量名，默认值为: `--color`
 
@@ -59,6 +61,42 @@ cssVariableName 用于设置 SVG 中使用的 CSS 变量名，这会影响use标
 options: {
   cssVariableName: '--svg-color'
 }
+```
+
+```html
+<svg>
+  <use xlink:href="#icon-complex" style="--svg-color: red">
+</svg>
+```
+
+### 与 rollup 配合使用
+
+目前只支持修改单色 SVG
+
+```js
+import rollupPluginSvgExtractColor from '@svg-extract-color/rollup-plugin-svg-extract-color'
+
+rollupPluginSvgExtractColor(),
+```
+
+#### outputDir
+
+outputDir用于设置 SVG 的输出目录，默认值为当前的输出目录
+
+```js
+rollupPluginSvgExtractColor({
+  outputDir: 'static/svg',
+}),
+```
+
+#### cssVariableName
+
+cssVariableName 用于设置 SVG 中使用的 CSS 变量名，这会影响use标签中传入的 CSS 变量名，默认值为: `--color`
+
+```js
+rollupPluginSvgExtractColor({
+  cssVariableName: '--svg-color'
+}),
 ```
 
 ```html
