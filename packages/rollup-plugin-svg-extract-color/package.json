@@ -1,6 +1,6 @@
 {
   "name": "@svg-extract-color/rollup-plugin-svg-extract-color",
-  "version": "0.1.0",
+  "version": "1.0.0-beta",
   "description": "A Rollup Plugin to extract svg color",
   "author": "lizijie123",
   "repository": {
@@ -10,21 +10,32 @@
   "publishConfig": {
     "access": "public"
   },
-  "license": "MIT",
-  "files": [
-    "dist",
-    "es"
-  ],
-  "main": "es/index.js",
-  "types": "es/index.d.ts",
   "scripts": {
     "rm": "rm -rf ./dist && rm -rf ./es",
     "build:dev": "pnpm run rm && cross-env NODE_ENV=development rollup -c ./build/rollup.config.ts",
     "build:prod": "pnpm run rm && cross-env NODE_ENV=production rollup -c ./build/rollup.config.ts"
   },
+  "license": "MIT",
+  "files": [
+    "dist",
+    "es"
+  ],
+  "main": "dist/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
   "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-transform-runtime": "^7.18.10",
+    "@babel/preset-env": "^7.18.0",
+    "@babel/preset-typescript": "^7.16.7",
+    "@babel/runtime": "^7.18.9",
+    "@rollup/plugin-alias": "^3.1.9",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@svg-extract-color/svg-extract-color-core": "workspace:^1.0.0",
     "cross-env": "^7.0.3",
-    "fs-extra": "^10.1.0",
-    "rollup": "^2.78.0"
+    "rollup": "^2.78.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-node-resolve": "^5.2.0"
   }
 }
