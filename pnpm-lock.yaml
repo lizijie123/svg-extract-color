@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@svg-extract-color/rollup-plugin-svg-extract-color': workspace:^1.0.0-beta
       '@svg-extract-color/svg-extract-color-core': workspace:*
       '@svg-extract-color/svg-extract-color-loader': workspace:*
       '@types/jest': ^27.5.1
@@ -21,6 +22,7 @@ importers:
       tslib: ^2.4.0
       typescript: ^4.6.4
     devDependencies:
+      '@svg-extract-color/rollup-plugin-svg-extract-color': link:packages/rollup-plugin-svg-extract-color
       '@svg-extract-color/svg-extract-color-core': link:packages/svg-extract-color-core
       '@svg-extract-color/svg-extract-color-loader': link:packages/svg-extract-color-loader
       '@types/jest': registry.npmmirror.com/@types/jest/27.5.1

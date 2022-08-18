@@ -8,6 +8,7 @@
     "publish:rollup-plugin-svg-extract-color": "pnpm run build:prod -r --filter rollup-plugin-svg-extract-color && pnpm publish -r --filter rollup-plugin-svg-extract-color"
   },
   "devDependencies": {
+    "@svg-extract-color/rollup-plugin-svg-extract-color": "workspace:*",
     "@svg-extract-color/svg-extract-color-core": "workspace:*",
     "@svg-extract-color/svg-extract-color-loader": "workspace:*",
     "@types/jest": "^27.5.1",
