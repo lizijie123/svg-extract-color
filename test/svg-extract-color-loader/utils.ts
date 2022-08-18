@@ -1,7 +1,7 @@
 import fs from 'fs'
 
 /**
- * 获取所有svg文件
+ * 获取svg文件
  */
 export function getSvgFile (fileName: string): string {
   return fs.readFileSync(`${process.cwd()}/test/svg-extract-color-loader/svg/${fileName}`, 'utf-8')

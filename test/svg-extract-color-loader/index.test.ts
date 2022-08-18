@@ -3,8 +3,9 @@ import svgExtractColorLoaderUtils from './svg-extract-color-loader-utils'
 
 describe('constants', () => {
   it('svg-extract-color-loader', async () => {
+    const svgName = 'test.svg'
     // 需要编译的svg
-    const currentSvg = utils.getSvgFile('test.svg')
+    const currentSvg = utils.getSvgFile(svgName)
     // 编译的目标svg
     let targetSvg = currentSvg.replace(/#000000/ig, 'var(--color, #000000)')
 
